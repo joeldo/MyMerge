@@ -71,7 +71,7 @@ rm $MERGED
 rm $MERGE_CLI
 rm $MERGE_TX
 # Retrieve the latest wallet release
-LATEST_RELEASE_URL=https://api.github.com/repos/ProjectMerge/merge/releases/latest
+LATEST_RELEASE_URL=https://gitlab.projectmerge.org/ProjectMerge/merge/-/tags/v1.0.4-alpha
 FILE_ENDIND=x86_64-linux-gnu.tar.gz
 release_file_url=$(curl -s $LATEST_RELEASE_URL | grep "browser_download_url.*$FILE_ENDIND" | cut -d : -f 2,3 | tr -d \")
 release_file_name=$(basename $release_file_url)
